@@ -190,8 +190,8 @@ if args.analysis_level == "participant":
     from qap.cli import QAProtocolCLI
     # TODO: this needs to be changed so that it can take in config_file and
     #       subject_list_file....
-    obj = QAProtocolCLI()
-    obj.run()
+    obj = QAProtocolCLI(parse_args=False)
+    obj.run(config_file, subject_list_file)
 
 
 # #TODO: Build and run the pipeline
